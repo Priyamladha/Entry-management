@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta id="flag" data-flag="{{ flag }}">
+    <title>Entry Management</title>
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+
+<body>
+  <h1>User Details</h1>
+  <br>
+  <a href="/host">Host Details</a>    
+  <br><br>
+    <form method="post">
+        <input type="radio" name="check" value="checkin" checked> Checkin<br>
+       <input type="radio" name="check" value="checkout"> Checkout<br>
+       <br>
+      Enter Name <input type="text" name="name"  required="required" />
+      <br>
+      <br>
+      Enter Email <input type="email" name="email"  required="required" />
+      <br><br>
+      Enter Phone <input type="number" name="number"  required="required" />
+      <br><br>
+      <button type="submit" class="button">Submit</button>
+    </form>
+    
+    <script> 
+        var x= "{{flag}}";
+        if(x==1)
+        alert("User doesn't exists");
+        else if(x==-1)
+        alert("User Checked-out Successfully");
+      </script>
+    <script> 
+        var y= "{{flagg}}"
+        if(y==1)
+        alert("User Exists Already");
+        else if(y==-1)
+        alert("User Checked-in Successfully");
+      </script>
+
+
+
+</body>
+</html>
