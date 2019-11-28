@@ -1,6 +1,6 @@
 # [SummerGeeks](https://summergeeks.in/) by Innovaccer
 ## Assignment for SDE - Intern (Applications) [Link](https://summergeeks.in/static/assignments/summergeeks%202020%20-%20SDE%20Assignment.pdf) 
-
+/
 ## Entry Management Application  
   
 An application, which can capture the Name, email address, phone no of the visitor and the host on the front end.  
@@ -20,5 +20,5 @@ There is also a provision of the checkout time which the guest can provide once 
 * In your terminal ```pip install -r requirements.txt```
 * Run the ```app.py``` file
 
-
+## Application
 The application is Deployed on Heroku Link for the same is - [Entry Management Application](https://stormy-badlands-64543.herokuapp.com/)
