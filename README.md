@@ -1,2 +1,2 @@
 # Entry-management
-This is sample readme.
+This is sample readme
