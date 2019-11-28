@@ -1,50 +1,128 @@
 <!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta id="flag" data-flag="{{ flag }}">
-    <title>Entry Management</title>
-    <link rel="stylesheet" href="static/css/style.css">
+<html class="no-js"> 
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <title>Entry Management</title>
 
-</head>
-
-<body>
-  <h1>User Details</h1>
-  <br>
-  <a href="/host">Host Details</a>    
-  <br><br>
-    <form method="post">
-        <input type="radio" name="check" value="checkin" checked> Checkin<br>
-       <input type="radio" name="check" value="checkout"> Checkout<br>
-       <br>
-      Enter Name <input type="text" name="name"  required="required" />
-      <br>
-      <br>
-      Enter Email <input type="email" name="email"  required="required" />
-      <br><br>
-      Enter Phone <input type="number" name="number"  required="required" />
-      <br><br>
-      <button type="submit" class="button">Submit</button>
-    </form>
-    
-    <script> 
-        var x= "{{flag}}";
-        if(x==1)
-        alert("User doesn't exists");
-        else if(x==-1)
-        alert("User Checked-out Successfully");
-      </script>
-    <script> 
-        var y= "{{flagg}}"
-        if(y==1)
-        alert("User Exists Already");
-        else if(y==-1)
-        alert("User Checked-in Successfully");
-      </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		
+        <link rel="stylesheet" href="{{ url_for('static', filename='plugins/themefisher-font/style.css') }}">
+		<!-- bootstrap.min css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='plugins/bootstrap/dist/css/bootstrap.min.css') }}">
+		<!-- Animate.css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='plugins/animate-css/animate.css') }}">
+        <!-- Magnific popup css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='plugins/magnific-popup/dist/magnific-popup.css') }}">
+		<!-- Slick Carousel -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='plugins/slick-carousel/slick/slick.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='plugins/slick-carousel/slick/slick-theme.css') }}">
+		<!-- Main Stylesheet -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://vjs.zencdn.net/7.6.5/video-js.css" rel="stylesheet">
+        <style> 
+            input {
+              color:black;
+            }
+            </style>
+			
+    </head>
+	
+    <body id="body" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 
+		<div class="parallax-section " >
+			<div class="">
+				<div class="row">
+				
+					<!-- section title -->
+					<div class="title text-center wow fadeIn" data-wow-duration="1500ms" >
+            <br>
+						<h2>User<span class="color">Details</span> </h2>
+						<div class="border"></div>
+					</div>
+					<!-- /section title -->
+					
+					<!-- About item -->
+					<div style="">
+					<div class="col-lg-6 text-center wow fadeInUp" data-wow-duration="500ms" style="margin-left:30px" >
+						<div >							
+							<h2 style="color: #57CBCC;margin-left:50px" >Click <a href="/host">here</a> to enter Host Details</h2> 
+							<br><br>
+							  <form method="post">
+                  <div style="margin-right:180px">
+                <label ><h2 style="color: #57CBCC;" >Checkin</h2></label> <input type="radio" name="check" value="checkin" checked style="margin-left:43px"/> <br>
+                <label ><h2 style="color: #57CBCC;" >Checkout</h2></label><input type="radio" name="check" value="checkout" style="margin-left:30px"/><br>
+                </div> 
+                <br>
+								<label ><h2 style="color: #57CBCC;">Name</h2></label>  <input type="text" name="name"  required="required" size="30" style="margin-left:30px"/>
+								<br>
+								<br>
+								<label><h2 style="color: #57CBCC;">Email</h2></label>  <input type="email" name="email"  required="required" size="30" style="margin-left:35px"/>
+                <br><br>
+                <div style="margin-right:100px">
+								<label><h2 style="color: #57CBCC;" >Phone</h2></label>  <input type="number" name="number"  required="required" style="margin-left:25px"/></div>
+								<br><br>
+								<button class="btnn" type="submit" class="button"><strong>Submit</strong></button>
+							  </form>
+		
+						</div>
+					</div> 
+			
+					<div class="col-md-5 text-center wow fadeInUp" data-wow-duration="500ms" data-wow-delay="500ms" style="margin-left:100px">
+						<div class="block kill-margin-bottom">
 
-</body>
+						</div>
+					</div> 
+					</div>
+					<!-- End About item -->
+	
+				</div> 		<!-- End row -->
+			</div>
+
+		</div>   <!-- End section -->
+
+<script> 
+	var x= "{{flag}}";
+	if(x==1)
+	alert("User doesn't exists");
+	else if(x==-1)
+	alert("User Checked-out Successfully");
+  </script>
+
+<script> 
+	var y= "{{flagg}}"
+	if(y==1)
+	alert("User Exists Already");
+	else if(y==2)
+	alert("No Host, add Host");
+	else if(y==-1)
+	alert("User Checked-in Successfully");
+  </script>
+
+		<!-- Main jQuery -->
+		<script type="text/javascript" src="static/plugins/jquery/dist/jquery.min.js"></script>
+		<!-- Bootstrap 3.1 -->
+		<script type="text/javascript" src="static/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- Slick Carousel -->
+		<script type="text/javascript" src="static/plugins/slick-carousel/slick/slick.min.js"></script>
+		<!-- Portfolio Filtering -->
+		<script type="text/javascript" src="static/plugins/mixitup/dist/mixitup.min.js"></script>
+		<!-- Smooth Scroll -->
+		<script type="text/javascript" src="static/plugins/smooth-scroll/dist/js/smooth-scroll.min.js"></script>
+		<!-- Magnific popup -->
+		<script type="text/javascript" src="static/plugins/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+		<!-- Google Map API -->
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+		<!-- Sticky Nav -->
+		<script type="text/javascript" src="static/plugins/Sticky/jquery.sticky.js"></script>
+		<!-- Number Counter Script -->
+		<script type="text/javascript" src="static/plugins/count-to/jquery.countTo.js"></script>
+		<!-- wow.min Script -->
+		<script type="text/javascript" src="static/plugins/wow/dist/wow.min.js"></script>
+		<!-- Custom js -->
+		<script type="text/javascript" src="static/js/script.js"></script>
+		
+    </body>
 </html>

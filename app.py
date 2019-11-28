@@ -60,8 +60,8 @@ def host_post():
     email = request.form['email']
     number = request.form['number']
     import create_host
-    create_host.create(name,email,number)
-    return render_template("host.html")
+    flag = create_host.create(name,email,number)
+    return render_template("host.html",flag=flag)
 
 if __name__ == "__main__":
     app.run(debug=True)

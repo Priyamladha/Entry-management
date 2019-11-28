@@ -50,5 +50,10 @@ def send(name1,email1,number1):
         s.quit()
         return -1
     except:
-        return 1
+        try:
+            host = Host.query.first()
+            host_number = host.number
+            return 1
+        except:
+            return 2
 

@@ -26,7 +26,7 @@ def send(name1,email1,number1):
         msg['From'] = sender_id
         msg['To'] = user.email
         # msg.set_content(message)
-        html_message=open('templates/html_email_user.html').read().format(name=name1,number=number1,checkin=checkin1,checkout=checkout1,hostname=hostname1,address="XYZ")
+        html_message=open('templates/html_email_user.html').read().format(name=name1,number=number1,checkin=checkin1,checkout=checkout1,hostname=hostname1,address="2nd and 9th Floor, Tower 3, Candor Techspace, Rajat Vihar, Block B, Industrial Area, Sector 62, Noida, Uttar Pradesh 201309")
         msg.add_alternative(html_message, subtype='html')
         s.login(sender_id,"qKHcnWwBEkL8g96")
         s.send_message(msg)
