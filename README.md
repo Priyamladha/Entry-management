@@ -15,7 +15,7 @@ There is also a provision of the checkout time which the guest can provide once 
 5. Host name 
 6. Address visited.
 
-## Instructions to run
+## Instructions To Run
 
 * Clone the project
 * In your terminal ```pip install -r requirements.txt```
