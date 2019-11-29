@@ -33,10 +33,6 @@ db.create_all()
 def download_file():
     return render_template('index.html')
 
-@app.route('/host')
-def download():
-    return render_template('host.html')
-
 @app.route('/', methods=['POST'])
 def user_post():
 
@@ -44,6 +40,16 @@ def user_post():
     email = request.form['email']
     number = request.form['number']
     value = request.form['check']
+
+    hostname = request.form['hostname']
+    hostemail = request.form['hostemail']
+    hostnumber = request.form['hostnumber']
+    if hostname=="" or hostemail=="" or hostnumber=="":
+        pass
+    else:
+        import create_host
+        create_host.create(hostname,hostemail,hostnumber)
+
     if value=="checkin":
         import checkin
         flagg=checkin.send(name,email,number)
@@ -54,14 +60,6 @@ def user_post():
         return render_template("index.html",flag=flag)
 
 
-@app.route('/host', methods=['POST'])
-def host_post(): 
-    name = request.form['name']
-    email = request.form['email']
-    number = request.form['number']
-    import create_host
-    flag = create_host.create(name,email,number)
-    return render_template("host.html",flag=flag)
 
 if __name__ == "__main__":
     app.run(debug=True)

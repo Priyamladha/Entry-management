@@ -48,6 +48,12 @@ def send(name1,email1,number1):
         s.login(sender_id,"qKHcnWwBEkL8g96")
         s.send_message(msg)
         s.quit()
+
+        host1=Host.query.first()
+        host_number=host1.number
+        Host.query.filter_by(number=host_number).delete()
+        db.session.commit()
+        
         return -1
     except:
         try:

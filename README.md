@@ -20,6 +20,7 @@ There is also a provision of the checkout time which the guest can provide once 
 * Clone the project
 * In your terminal ```pip install -r requirements.txt```
 * Run the ```app.py``` file
+* Open the Localhost link on your web browser
 
 ## Application
 The application is Deployed on Heroku Link for the same is - [Entry Management Application](https://stormy-badlands-64543.herokuapp.com/)
