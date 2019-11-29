@@ -34,14 +34,14 @@ This is how the Application looks
 
 
 
-To capture the details of User and Host the idea was Simple
+To capture the details of User and Host the idea is Simple
 
 * First created a html page in which User can enter his/her and host details
 * For Check-in if the User doesn't enter host details an alert will be given to him stating that no host details added, on successful completion of the form User and
 Host Details will get saved in database and also Host will get a sms and email having Visitor Details
 * To Store User and Host data Sqlite database is used, ```Flask-SQLAlchemy``` let us do that
-* For sms, Fast2sms dev api is used
-* For email, python inbuilt library ```smtplib``` is used
+* For sms, ```Fast2sms``` dev api is used
+* For email, python inbuilt library ```smtplib``` is used also ```Flask-Mail```
 * Now more users can check-in with the same procedure or previous one who already are checked-in can check-out
 * To Check-out user has to select check-out option and enter his/her details if the details entered are wrong they will alerted that user doesn't exists, basically for check-out phone number should be correct as phone number being a primary key it is used to retrieve data from database
 * Once details retrieved a mail is sent to the user stating his/her visit details
