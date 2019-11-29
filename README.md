@@ -23,7 +23,7 @@ There is also a provision of the checkout time which the guest can provide once 
 * Open the Localhost link on your web browser
 
 ## Application
-The application is Deployed on Heroku Link for the same is - [Entry Management Application](https://stormy-badlands-64543.herokuapp.com/)
+The application is Deployed on Heroku, Link for the same is [Entry Management Application](https://stormy-badlands-64543.herokuapp.com/)
 
 This is how the Application looks
 
@@ -41,12 +41,12 @@ To capture the details of User and Host the idea is Simple
 Host Details will get saved in database and also Host will get a sms and email having Visitor Details
 * To Store User and Host data Sqlite database is used, ```Flask-SQLAlchemy``` let us do that
 * For sms, ```Fast2sms``` dev api is used
-* For email, python inbuilt library ```smtplib``` is used also ```Flask-Mail```
+* For email, python inbuilt library ```smtplib``` is used also dependency ```Flask-Mail```
 * Now more users can check-in with the same procedure or previous one who already are checked-in can check-out
 * To Check-out user has to select check-out option and enter his/her details if the details entered are wrong they will alerted that user doesn't exists, basically for check-out phone number should be correct as phone number being a primary key it is used to retrieve data from database
 * Once details retrieved a mail is sent to the user stating his/her visit details
 
-## Libraries Used
+## Dependencies Used
 
 * Flask
 * Flask-Mail
